@@ -25,6 +25,7 @@
 
         <div *ngIf="loggedIn; else elsepart">
           <button routerLink="profile/profile">{{username}}</button>
+          <button (click)="logout()">Logout</button>
         </div>
         <ng-template #elsepart >
         <button routerLink="user/login"><button  class="btn btn-outline-success me-2" >Login</button></button>

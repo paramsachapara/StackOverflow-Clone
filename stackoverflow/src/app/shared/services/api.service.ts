@@ -13,7 +13,8 @@ export class ApiService {
   signup = environment.signU;
   login = environment.userlogin
   addNewQuestion =environment.addNewQuestion;
-  allQuestion = environment.Allquestion
+  allQuestion = environment.Allquestion;
+  addanswer =environment.answer
 
   constructor(private http:HttpClient) { }
 
@@ -45,6 +46,14 @@ export class ApiService {
   getAllQuestion(){
     try {
       return this.http.get(this.baseURL + this.allQuestion);
+    } catch (error) {
+      console.error('An error occurred while fetching all products:', error);
+      throw error; // re-throw the error to be caught by the calling function
+    }
+  }
+  addAnswer(body:any,id:any){
+    try {
+      return this.http.put(this.baseURL + this.addanswer+"/"+id,body);
     } catch (error) {
       console.error('An error occurred while fetching all products:', error);
       throw error; // re-throw the error to be caught by the calling function

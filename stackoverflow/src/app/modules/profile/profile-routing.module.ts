@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { AskQuestionComponent } from './ask-question/ask-question.component';
 import { PreviousQuestionComponent } from './previous-question/previous-question.component';
+import { AuthGuard } from 'src/app/shared/auth.guard';
 
 
 const routes: Routes = [
   {
     path:"profile",
-    component:ProfileComponent
+    component:ProfileComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:"profile/askQuestion",

@@ -3,5 +3,6 @@ export const environment = {
   signU:"/users",
   userlogin:"/users",
   addNewQuestion:"/questionDetail",
-  Allquestion:"/questionDetail"
+  Allquestion:"/questionDetail",
+  answer:"/questionDetail"
 };
