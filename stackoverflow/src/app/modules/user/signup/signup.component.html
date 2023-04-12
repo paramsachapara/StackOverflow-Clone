@@ -1,0 +1,47 @@
+<div class="d-flex justify-content-center">
+  <main class="login-form " style="width: 50%;">
+    <!-- <div class="cotainer"> -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">signup</div>
+                    <div class="card-body">
+                        <form [formGroup]="signupForm" action="" method="">
+                          <!-- username -->
+                            <div class="form-group row">
+                                <label for="username"  class="col-md-4 col-form-label text-md-right ">Username</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="username" class="form-control" [class.is-invalid]="this.signupForm.get('username')?.invalid && this.signupForm.get('username')?.touched " formControlName="username"name="username" required autofocus>
+                                </div>
+                            </div>
+                            <!-- email -->
+                            <div class="form-group row">
+                              <label for="email"  class="col-md-4 col-form-label text-md-right ">Email</label>
+                              <div class="col-md-6">
+                                  <input type="text" id="email" class="form-control" [class.is-invalid]="this.signupForm.get('email')?.invalid && this.signupForm.get('email')?.touched " formControlName="email"name="email" autofocus>
+                              </div>
+                          </div>
+
+                            <!-- password -->
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right mt-1">Password</label>
+                                <div class="col-md-6 mt-1">
+                                    <input [class.is-invalid]="this.signupForm.get('password')?.invalid && this.signupForm.get('password')?.touched " formControlName="password" type="password" id="password" class="form-control" name="password" required>
+                                </div>
+                                <p><small> a password must be 8 characters including one uppercase letter, one special character and alphanumeric characters</small></p>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" (click)="signup()" class="btn btn-primary" >
+                                    Signup
+                                </button>
+                            </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+  </main>
+
+  </div>

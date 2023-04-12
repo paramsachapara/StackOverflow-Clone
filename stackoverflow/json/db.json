@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "username": "param_103",
+      "email": "a@gmail.com",
+      "password": "jaiminsa",
+      "id": 1
+    },
+    {
+      "username": "param_103",
+      "email": "a@gmail.com",
+      "password": "jaiminsa",
+      "id": 2
+    },
+    {
+      "username": "param_103",
+      "email": "a@gmail.com",
+      "password": "jaiminsa",
+      "id": 3
+    }
+  ],
+  "questionDetail": [
+    {
+      "title": "python",
+      "question": "how to sue sets",
+      "tags": [
+        "python",
+        "datascience",
+        "ml"
+      ],
+      "username": "param_103",
+      "answer": "no ans yet",
+      "id": 1
+    }
+  ]
+}

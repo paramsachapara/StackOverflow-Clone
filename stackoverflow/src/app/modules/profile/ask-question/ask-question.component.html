@@ -1,0 +1,29 @@
+<div class="container mt-3 row">
+  <div class="col-md-6 ms-5">
+  <h1>Add Question</h1>
+  <form [formGroup]="addQusetionFrom" (ngSubmit)="add()">
+    <div class="form-group my-1">
+      <label for="questionTitle">Question Title</label>
+      <input type="text" class="form-control" id="questionTitle" placeholder="Enter question title" formControlName="title">
+      <div class=" text-danger">
+          <p *ngIf="addQusetionFrom.get('title')?.errors?.['required'] &&  addQusetionFrom.get('title')?.touched">title is required</p>
+        </div>
+    </div>
+    <div class="form-group my-1">
+      <label for="question">Question </label>
+      <textarea class="form-control" id="question" rows="5" placeholder="Enter question " formControlName="question"></textarea>
+      <div class=" text-danger">
+          <p *ngIf="addQusetionFrom.get('body')?.errors?.['required'] &&  addQusetionFrom.get('body')?.touched">body is required</p>
+        </div>
+    </div>
+    <div class="form-group my-1">
+      <label for="questionTags">Tags</label>
+      <input type="text" class="form-control" id="questionTags" placeholder="Enter tags separated by commas" formControlName="tags">
+      <div class=" text-danger">
+          <p *ngIf="addQusetionFrom.get('tags')?.errors?.['required'] &&  addQusetionFrom.get('tags')?.touched">tags is required</p>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary my-1">Add</button>
+  </form>
+</div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <div *ngFor="let que of allQuestion">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ que.question || null }}</h5>
+        <div class="card-text">
+          <div class="tags">
+            <span class="badge badge-secondary" *ngFor="let tag of que.tags">{{ tag }}</span>
+          </div>
+          <hr>
+          <p>{{ que.answer ||null }}</p>
+        </div>
+        <button [routerLink]="['giveAnswer',que.id]" >give answer</button>
+      </div>
+    </div>
+  </div>
+</div>
